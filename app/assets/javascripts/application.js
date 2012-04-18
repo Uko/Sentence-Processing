@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//
+// dracula stuff
+//= require dracula/js/Curry-1.0.1
+//= require dracula/js/dracula_algorithms
+//= require dracula/js/dracula_graffle
+//= require dracula/js/dracula_graph
+//= require dracula/js/jquery-1.4.2.min
+//= require dracula/js/raphael-min
+//= require dracula/js/raphael
+//= require dracula/js/seedrandom
+//= require dracula/js/underscore
