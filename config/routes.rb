@@ -1,6 +1,11 @@
 ConceptGraph::Application.routes.draw do
-  resources :words
+	
+	root :to => 'sentences#new'
+	
+	match "/sentence/new" => "sentences#new", :as => :new_sentence, :via => :get
+	match "/sentence/show" => "sentences#show", :as => :show_sentence, :via => :get
 
+  resources :words
   resources :word_cores
 
   # The priority is based upon order of creation:

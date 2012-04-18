@@ -1,0 +1,6 @@
+%h1 Нове речення
+= form_tag show_sentence_path, :method => :get do
+  .field
+    = label_tag 'Речення:'
+    = text_field_tag 'sentence'
+  = submit_tag 'Вогень!'
