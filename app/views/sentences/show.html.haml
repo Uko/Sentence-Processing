@@ -1,3 +1,12 @@
 %h1 Граф
 %p= @sentence
+#canvas
+= javascript_tag do
+    $(document).ready(function() {
+    var g = new Graph();
+    /magic
+    var layouter = new Graph.Layout.Ordered(g, topological_sort(g));
+    var renderer = new Graph.Renderer.Raphael('canvas', g, 600, 300);
+    renderer.draw();
+    });
 = link_to 'Нове речення', new_sentence_path, :confirm => 'Ви справді хочете почати все з початку?'
