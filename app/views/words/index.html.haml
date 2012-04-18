@@ -1,0 +1,21 @@
+%h1 Listing words
+
+%table
+  %tr
+    %th Text
+    %th Word core
+    %th
+    %th
+    %th
+
+  - @words.each do |word|
+    %tr
+      %td= word.text
+      %td= link_to word.word_core.infinitive, word.word_core
+      %td= link_to 'Show', word
+      %td= link_to 'Edit', edit_word_path(word)
+      %td= link_to 'Destroy', word, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Word', new_word_path

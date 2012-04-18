@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Text:
+  = @word.text
+%p
+  %b Word core:
+  = link_to @word.word_core.infinitive, @word.word_core
+
+= link_to 'Edit', edit_word_path(@word)
+\|
+= link_to 'Back', words_path

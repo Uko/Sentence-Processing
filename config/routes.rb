@@ -1,4 +1,8 @@
 ConceptGraph::Application.routes.draw do
+  resources :words
+
+  resources :word_cores
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

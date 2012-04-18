@@ -1,0 +1,16 @@
+= form_for @word_core do |f|
+  -if @word_core.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@word_core.errors.count, "error")} prohibited this word_core from being saved:"
+      %ul
+        - @word_core.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :infinitive
+    = f.text_field :infinitive
+  .field
+    = f.label :part
+    = f.select :part, @word_core.class.all_parts
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,21 @@
+%h1 Listing word_cores
+
+%table
+  %tr
+    %th Infinitive
+    %th Part
+    %th
+    %th
+    %th
+
+  - @word_cores.each do |word_core|
+    %tr
+      %td= word_core.infinitive
+      %td= word_core.part
+      %td= link_to 'Show', word_core
+      %td= link_to 'Edit', edit_word_core_path(word_core)
+      %td= link_to 'Destroy', word_core, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Word core', new_word_core_path
