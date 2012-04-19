@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120418103840) do
+ActiveRecord::Schema.define(:version => 20120419022812) do
 
   create_table "word_cores", :force => true do |t|
     t.string   "infinitive"
