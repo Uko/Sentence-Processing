@@ -11,6 +11,9 @@ class SentencesController < ApplicationController
 		if(params.has_key? :sentence)
 			@sentence=params[:sentence]
 			@graph=Sentence.make_graph_of @sentence
+			puts '====='
+			puts @graph
+			puts '====='
 		else
 			redirect_to({:action => 'new'}, :notice => 'Can\'t show a graph for nothing :)')
 		end

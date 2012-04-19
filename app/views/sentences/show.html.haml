@@ -4,8 +4,9 @@
 = javascript_tag do
   $(document).ready(function() {
   var g = new Graph();
-  - @graph.each_pair do |key, value|
-    =raw "g.addEdge(\"#{key}\", \"#{value}\");"
+  = raw "g.addNode(\"#{@graph[1]}\", { stroke : \"#fff\", label : \"#{@graph[1]}\" });"
+  - @graph[0].each do |comb|
+    =raw "g.addEdge(\"#{comb[:edge][0]}\", \"#{comb[:edge][1]}\", {label : \"#{comb[:type]}\" });"
   var layouter = new Graph.Layout.Ordered(g, topological_sort(g));
   var renderer = new Graph.Renderer.Raphael('canvas', g, 600, 300);
   renderer.draw();
