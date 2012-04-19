@@ -10,6 +10,7 @@ class SentencesController < ApplicationController
   def show
 		if(params.has_key? :sentence)
 			@sentence=params[:sentence]
+			@graph=Sentence.make_graph_of @sentence
 		else
 			redirect_to({:action => 'new'}, :notice => 'Can\'t show a graph for nothing :)')
 		end
